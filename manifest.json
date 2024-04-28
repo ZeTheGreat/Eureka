@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Eureka!",
+    "description": "To remember all good ideas and duties!",
+    "version": "0.1",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popUp/index.html",
+        "default_icon": "images/128.png"
+    },
+    "permissions": [
+        "background",
+        "storage",
+        "nativeMessaging"
+    ]
+}
