@@ -3,6 +3,7 @@
     "name": "Eureka!",
     "description": "To remember all good ideas and duties!",
     "version": "0.1",
+    "options_page": "options/index.html",
     "background": {
         "service_worker": "background.js"
     },
