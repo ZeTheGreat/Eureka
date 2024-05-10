@@ -6,13 +6,16 @@
         <title>Eureka</title>
     </head>
     <body>
-        <label for="duties">Tarefa:</label>
-        <input type="text" id="duties" name="duties" placeholder="Digite o nome da sua tarefa"><button id="submit-button">Adicionar</button>
+        <div class="container-duties">
+            <label for="duties">Tarefa:</label>
+            <input type="text" id="duties" name="duties" placeholder="Digite o nome da sua tarefa"><button id="submit-button">Adicionar</button>
+        </div>
         <textarea name="" id="note-to-add" cols="36" rows="10"></textarea>
-        <select name="select" id="task">
-            <option value="" id="option"></option>
-        </select>
-        <button id="delete">Deletar</button>
-        <a href="../options/index.html">Home Page</a>
+        <div class="container-select">
+            <select name="select" id="task">
+            </select>
+            <button id="delete">Deletar</button>
+            <a href="../options/index.html" class="home-page">Home Page</a>
+        </div>
     </body>
 </html>

@@ -24,7 +24,7 @@ submitButton.addEventListener("click", function () {
   option.value = valor; // Use o valor do duties como valor da option
   option.text = valor;
   selectTask.add(option);
-  alert("Tarefa salva com sucesso!");
+    alert("Tarefa salva com sucesso!");
 });
 
 // Adiciona o ouvinte de evento para o evento de mudança no select
