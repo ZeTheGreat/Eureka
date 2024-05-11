@@ -54,7 +54,7 @@ function carregarTarefas() {
     const tasks = JSON.parse(savedData);
     
     // Limpa as opções existentes no select
-    selectTask.innerHTML = "";
+    selectTask.innerHTML = "<option>Tarefas: </option>";
     
     // Adiciona as novas opções
     Object.keys(tasks).forEach(duty => {
