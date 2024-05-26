@@ -13,18 +13,21 @@ submitButton.addEventListener("click", function () {
   if (dadosExistente) {
     informacoes = JSON.parse(dadosExistente);
   } else {
-    informacoes = {}; // Se não houver dados salvos, inicializa um novo objeto vazio para armazenar as informações
+    informacoes = {};
   }
 
-  // Usando o valor do duties como chave e o valor do note-to-add como valor no localStorage
-  informacoes[valor] = inputValue;
+  // Usando o valor do duties como chave e um objeto com valor e data como valor no localStorage
+  informacoes[valor] = {
+    text: inputValue,
+    date: new Date().toISOString()
+  };
 
-  localStorage.setItem("informacoes", JSON.stringify(informacoes)); // Salva o objeto atualizado no localStorage.
-  let option = document.createElement("option"); 
+  localStorage.setItem("informacoes", JSON.stringify(informacoes));
+  let option = document.createElement("option");
   option.value = valor; // Use o valor do duties como valor da option
   option.text = valor;
   selectTask.add(option);
-    alert("Tarefa salva com sucesso!");
+  alert("Tarefa salva com sucesso!");
 });
 
 // Adiciona o ouvinte de evento para o evento de mudança no select
@@ -40,7 +43,7 @@ selectTask.addEventListener("change", function() {
     // Exibe a informação correspondente no campo textarea
     const selectedTask = tasks[selectedValue];
     if (selectedTask) {
-      textArea.value = selectedTask;
+      textArea.value = selectedTask.text; // Corrigido para exibir apenas o texto da tarefa
     } else {
       textArea.value = ""; // Limpa o textarea se não houver informação correspondente
     }
@@ -54,7 +57,7 @@ function carregarTarefas() {
     const tasks = JSON.parse(savedData);
     
     // Limpa as opções existentes no select
-    selectTask.innerHTML = "<option>Tarefas: </option>";
+    selectTask.innerHTML = "<option>TAREFAS</option>";
     
     // Adiciona as novas opções
     Object.keys(tasks).forEach(duty => {
@@ -65,7 +68,6 @@ function carregarTarefas() {
     });
   }
 }
-
 
 // Adiciona o ouvinte de evento para o carregamento da extensão
 document.addEventListener("DOMContentLoaded", function () {

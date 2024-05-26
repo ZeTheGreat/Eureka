@@ -1,0 +1,68 @@
+:root {
+  --primary-color: #969593;
+  --primary-color-darker: #ca8e65;
+  --home-color: #ffffffc4;
+}
+
+body {
+  background-color: rgb(17, 86, 102);
+}
+
+td {
+  color: #fff;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  margin: 10px 0px;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+thead {
+  background-color: rgb(228 240 245);
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+thead {
+  background-color: rgb(228 240 245);
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+.option-btn {
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: var(--home-color);
+  text-align: center;
+  padding: 3px 5px;
+  border-radius: 5px;
+  color: #000022;
+}
+.option-btn:hover {
+  background-color: var(--primary-color-darker);
+}
+
+input {
+  width: 50%;
+  border-radius: 5px;
+}
